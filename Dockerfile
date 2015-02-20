@@ -12,7 +12,7 @@ RUN		apt-get update && \
         	apt-get autoremove --yes && \
         	rm -rf /var/lib/{apt,dpkg,cache,log}/
 
-# download and extract hadoop 
+# download and extract spark 
 RUN		mkdir -p ${SPARK_INSTALL_DIR} && \
 		curl -L --silent http://d3kbcqa49mib13.cloudfront.net/spark-${SPARK_VERSION}-bin-hadoop2.4.tgz | tar -xz --strip=1 -C ${SPARK_INSTALL_DIR}
 
